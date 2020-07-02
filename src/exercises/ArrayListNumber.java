@@ -43,12 +43,12 @@ public class ArrayListNumber {
         return sumEvenTotal;
     }
 
-    private static String printWords() {
+    /*private static String printWords() {
 
 
 
         //return ;
-    }
+    }*/
 }
 
 

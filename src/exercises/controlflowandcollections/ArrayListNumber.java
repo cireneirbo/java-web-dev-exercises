@@ -1,5 +1,6 @@
-package exercises;
+package exercises.controlflowandcollections;
 
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class ArrayListNumber {
@@ -18,6 +19,18 @@ public class ArrayListNumber {
         System.out.println(sumOfEvenNumbersArray(numbers));
 
         //ArrayList<String>
+        ArrayList<String> stringList = new ArrayList<>();
+        String storyString = "I would not, could not, in a box. " +
+                "I would not, could not with a fox. " +
+                "I will not eat them in a house. " +
+                "I will not eat them with a mouse.";
+        storyString.replaceAll(",", " ");
+        storyString.replaceAll("\\."," ");
+        String[] storyArray = storyString.split(" ");
+        for (String i : storyArray) {
+            stringList.add(i);
+        }
+        printWords(stringList);
 
     }
 
@@ -43,22 +56,18 @@ public class ArrayListNumber {
         return sumEvenTotal;
     }
 
-    /*private static String printWords() {
+    private static void printWords(ArrayList<String> strings) {
 
+        for (String i : strings) {
+            if(i.length() == 5) {
+                System.out.println(i);
+            } else {
 
+            }
+        }
 
-        //return ;
-    }*/
+    }
+
 }
 
 
-/*
-Write a static method to print out each word in a list that has exactly 5 letters.
-Modify your code to prompt the user to enter the word length for the search.
-
-BONUS: Instead of creating our own list of words,
-what if we want to use the string from the Array Practice section?
-
-Search “Java convert String to ArrayList” online to see how to split a
-string into the more flexible ArrayList collection
-*/
